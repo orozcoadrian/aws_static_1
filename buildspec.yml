@@ -1,0 +1,29 @@
+version: 0.2
+
+env:
+  variables:
+    key0: "value"
+    key1: "value"
+  parameter-store:
+    key2: "value"
+    key3: "value"
+            
+phases:
+  install:
+    commands:
+      - ls
+  pre_build:
+    commands:
+      - pwd
+  build:
+    commands:
+      - echo "build"
+  post_build:
+    commands:
+      - echo "post_build"
+artifacts:
+  files:
+    - location
+    - location
+  discard-paths: yes
+  base-directory: location
